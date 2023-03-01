@@ -13,6 +13,16 @@
     <title>React ⚛️</title>
   </head>
   <body>
-    <h1>Getting Started with React</h1>
+    <!-- The div tag is where we will render our React application -->
+    <div id="root"></div>
+    <!-- The script tag is where we will write our React code -->
+    <SCRIPT type="text/javascript">
+      // The ReactDOM.render() method is used to render the React application
+      ReactDOM.render(
+        // The React.createElement() method is used to create a React element
+        React.createElement("h1", null, "Getting Started with React"),
+        document.getElementById("root")
+      );
+    </SCRIPT>
   </body>
 </html>
