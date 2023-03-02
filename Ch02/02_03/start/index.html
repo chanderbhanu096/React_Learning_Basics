@@ -16,14 +16,30 @@
     <div id="root"></div>
 
     <script type="text/javascript">
+      // The React.createElement() method is stored in a variable heading
       let heading = React.createElement(
         "h1",
         null,
         "Getting Started with React"
       );
-
+      let ulist = React.createElement(
+        "ul",
+        {style: {color: "red"}},
+        React.createElement("li", null, "Item 1 complex method for creating list items"),
+        React.createElement("li", null, "Item 2 complex method for creating list items"),
+        React.createElement("li", null, "Item 3 complex method for creating list items")
+      );
+      
+      //ReactDOM.render(
+      //  ulist,
+      //  document.getElementById("root")
+      //);
       ReactDOM.render(
-        heading,
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>,
         document.getElementById("root")
       );
     </script>
