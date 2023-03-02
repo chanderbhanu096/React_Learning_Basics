@@ -8,10 +8,12 @@
   </head>
   <body>
       <div id="root"></div>
-      
+      <!-- storing the React element in a variable -->
+      let element = React.createElement("h1", null, "Getting Started with React");
       <script type="text/javascript">
           ReactDOM.render(
-              React.createElement("h1", null, "Getting Started!"),
+            // element variable is passed to the ReactDOM.render() method
+              element,
               document.getElementById("root")
           );
       </script>
