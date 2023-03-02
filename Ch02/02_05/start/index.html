@@ -16,12 +16,18 @@
   <body>
     <div id="root"></div>
 
+
     <script type="text/babel">
+      let robot = "🤖";
+      let alien = "👽";
+      let umbrella = "☂️";
+      let bag = "🎒";
       ReactDOM.render(
         <ul>
-          <li>🤖</li>
-          <li>🤠</li>
-          <li>🌝</li>
+          <!-- The curly braces are used to evaluate the JavaScript expression BY CALLING variable -->
+          <li>{robot}</li>
+          <li>{alien}</li>
+          <li>{umbrella}</li>
         </ul>,
         document.getElementById("root")
       );

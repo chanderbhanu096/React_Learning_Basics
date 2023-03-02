@@ -17,20 +17,64 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      let robot = "🤖";
-      let cowboy = "🤠";
-      let moon = "🌝";
-      let name = "React";
-      ReactDOM.render(
-        <ul>
-          <li>{robot}</li>
-          <li>{cowboy}</li>
-          <li>{moon}</li>
-          <li>{name.toUpperCase()}</li>
-          <li>{name.length}</li>
-        </ul>,
-        document.getElementById("root")
-      );
+      // When creating a component, it should be capital letter and it should be a function 
+      function Header(){
+        return(
+          <h1>My Kitchen</h1>
+        )
+      }
+
+      function MAIN(){
+        return(
+          <section>
+            <p>My kitchen is the best place in the house.</p>
+          </section>
+        )
+      }
+
+      function HEROSECTION(){
+        return(
+          <div>
+            <h2>our kitchen </h2>
+            <p> This is the main section of the landing page, which includes a large image or video with a brief headline, subheading, and a call-to-action button or form.</p>
+          </div>
+        )
+      }
+      function FAQ_SECTION(){
+        return(
+          <div>
+            <h2>FAQ</h2>
+            <p> This section provides answers to frequently asked questions about the product or service</p>
+          </div>
+        )
+      }
+      function CONATCT_SECTION(){
+        return(
+          <div>
+            <h2>Contact</h2>
+            <p> This section provides contact information for the business or organization.</p>
+          </div>
+        )
+      }
+      function FOOTER(){
+        return(
+          <div>
+            <h2>Footer</h2>
+            <p>This is the bottommost section of the landing page, which usually includes links to the company's social media accounts, legal information, and a copyright notice.</p>
+          </div>
+        )
+      }
+    ReactDOM.render(
+      <div>
+        <Header />
+        <MAIN />
+        <HEROSECTION />
+        <FAQ_SECTION />
+        <CONATCT_SECTION />
+        <FOOTER />
+      </div>,
+      document.getElementById("root")
+    );
     </script>
   </body>
 </html>
