@@ -28,8 +28,8 @@
         return (
           <section>
             <ul>
-              {props.dishes.map((dish) => (
-                <li>{dish}</li>
+              {props.dishes.map((dish,i) => (
+                <li key = {i}>{dish}</li>
               ))}
             </ul>
           </section>
