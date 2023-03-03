@@ -17,30 +17,66 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      function Header() {
-        return (
-          <header>
-            <h1>Eve's Kitchen</h1>
-          </header>
-        );
+      // When creating a component, it should be capital letter and it should be a function 
+      function Header(props){
+        // for debugging purpose
+        console.log(props);
+        return(
+          <h1>{props.name} Kitchen</h1>
+        )
       }
-      function Main() {
-        return (
+
+      function MAIN(props){
+        return(
           <section>
-            <p>
-              We serve the most delicious food
-              around
-            </p>
+            <p>My kitchen is the best place in the house.</p>
           </section>
-        );
+        )
       }
-      function App() {
-        return (
+
+      function HEROSECTION(){
+        return(
           <div>
-            <Header />
-            <Main />
+            <h2>our kitchen </h2>
+            <p> This is the main section of the landing page, which includes a large image or video with a brief headline, subheading, and a call-to-action button or form.</p>
           </div>
-        );
+        )
+      }
+      function FAQ_SECTION(props){
+        return(
+          <div>
+            <h2>{props.newtitle}</h2>
+            <p> This section provides answers to frequently asked questions about the product or service</p>
+          </div>
+        )
+      }
+      function CONATCT_SECTION(props){
+        return(
+          <div>
+            <h2>Contact</h2>
+            <p> Our Phone : {props.number}</p>
+          </div>)
+      }
+      function FOOTER(props){
+        return(
+          <div>
+            <h2>Footer</h2>
+            <p>Copyright {props.year}</p>
+          </div>
+        )
+      }
+
+      function App(){
+        return(
+          <div>
+            <Header name = "Bhanu"/>
+            <MAIN />
+            <HEROSECTION />
+            <FAQ_SECTION newtitle = "changed from FAQ to Ask Questions"/>
+            <CONATCT_SECTION number = "+49 123456789"/>
+            <FOOTER year={new Date().getFullYear()}/>
+          </div>
+        )
       }
 
       ReactDOM.render(
