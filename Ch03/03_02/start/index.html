@@ -54,7 +54,7 @@
         return(
           <div>
             <h2>Contact</h2>
-            <p> Our Phone : {props.number}</p>
+            <p> Our Phone : +{props.number}</p>
           </div>)
       }
       function FOOTER(props){
@@ -73,7 +73,7 @@
             <MAIN />
             <HEROSECTION />
             <FAQ_SECTION newtitle = "changed from FAQ to Ask Questions"/>
-            <CONATCT_SECTION number = "+49 123456789"/>
+            <CONATCT_SECTION number = {49123456789} />
             <FOOTER year={new Date().getFullYear()}/>
           </div>
         )
