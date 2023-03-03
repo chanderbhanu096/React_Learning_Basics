@@ -54,7 +54,6 @@
             <h2>Contact</h2>
             <p> This section provides contact information for the business or organization.</p>
           </div>
-        )
       }
       function FOOTER(){
         return(
@@ -64,17 +63,37 @@
           </div>
         )
       }
-    ReactDOM.render(
-      <div>
-        <Header />
-        <MAIN />
-        <HEROSECTION />
-        <FAQ_SECTION />
-        <CONATCT_SECTION />
-        <FOOTER />
-      </div>,
-      document.getElementById("root")
-    );
+
+      function App(){
+        return(
+          <div>
+            <Header />
+            <MAIN />
+            <HEROSECTION />
+            <FAQ_SECTION />
+            <CONATCT_SECTION />
+            <FOOTER />
+          </div>
+        )
+      }
+
+      ReactDOM.render(
+        <App />,
+        document.getElementById("root")
+      );
+    // Another way to render multiple components if you don't want to use a function COMPONENT(APP for this example) then WRITE ALL THE COMPONENTS IN A IN THE RENDER METHOD
+    // ReactDOM.render(
+    //   <div>
+    //     //multiple components should be rendered in a single div or empty <> </> tag
+    //     <Header />
+    //     <MAIN />
+    //     <HEROSECTION />
+    //     <FAQ_SECTION />
+    //     <CONATCT_SECTION />
+    //     <FOOTER />
+    //   </div>,
+    //   document.getElementById("root")
+    // );
     </script>
   </body>
 </html>
