@@ -66,7 +66,16 @@
 
       function App() {
         return (
-          <div>
+          // will avoid the need for a div wrapper without adding extra nodes to the DOM
+          <React.Fragment>
+              <Header name="Cindy" />
+              <Main
+                adjective="amazing"
+                dishes={dishObjects}
+              />
+              <Footer
+                year={new Date().getFullYear()}
+              />
             <Header name="Cindy" />
             <Main
               adjective="amazing"
@@ -75,7 +84,7 @@
             <Footer
               year={new Date().getFullYear()}
             />
-          </div>
+          </React.Fragment>
         );
       }
 
