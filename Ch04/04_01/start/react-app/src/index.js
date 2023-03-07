@@ -8,9 +8,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   // StrictMode is a tool for highlighting potential problems in an application.
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <App library = "React" />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
