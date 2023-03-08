@@ -2,12 +2,15 @@ import "./App.css";
 import { useState } from "react";
 
 function App({propvariable}) {
-  const what = useState("hello");
+  // emotion is for the intial value of state
+  // setEmotion is for the function that will update the state of the emotion
   const [emotion, setEmotion] = useState("happy");
-  console.log(what);
   return (
     <div className="App">
-      <h1>Hello from {propvariable}</h1>
+      <h1>Hello from {emotion}</h1>
+      {/* state being changed */}
+      <button onClick={() => setEmotion("sad")}>sad</button>
+      <button onClick={() => setEmotion("happy")}>happy</button>
     </div>
   );
 }
