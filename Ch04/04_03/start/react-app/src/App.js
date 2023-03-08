@@ -5,6 +5,7 @@ function App({propvariable}) {
   // emotion is for the intial value of state
   // setEmotion is for the function that will update the state of the emotion
   const [emotion, setEmotion] = useState("happy");
+  const [secondary, setSecondary] = useState("tired");
   return (
     <div className="App">
       <h1>Hello from {emotion}</h1>
