@@ -1,28 +1,28 @@
 import "./App.css";
-import { useRef } from "react";
+import { useState } from "react";
 // useref is a hook that allows you to create a reference to a DOM element or a form element
 
 function App() {
-  const txtTitle = useRef();
-  const hexColor = useRef();
-
+  const[title, setTitle] = useState(""); // default title is empty
+  const[color, setColor] = useState("#000000"); // default color is black
   const submit = (e) => {
     e.preventDefault();
-    const title = txtTitle.current.value;
-    const color = hexColor.current.value;
     alert(`${title}, ${color}`);
-    txtTitle.current.value = "";
-    hexColor.current.value = "";
+    // setTitle("");
+    // setColor("#000000");
   };
 
   return (
     <form onSubmit={submit}>
       <input
-        ref={txtTitle}
+        value={title}
+        onChange={(event) => setTitle(event.target.value)}
         type="text"
         placeholder="color title..."
       />
-      <input ref={hexColor} type="color" />
+      <input value={color} 
+      onChange={(event) => setColor(event.target.value)}
+      type="color" />
       <button>ADD</button>
     </form>
   );
