@@ -1,6 +1,16 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 
+// username is passed with curly braces because it is a prop        
+// curley usenrname is a prop why curly braces are used for props  
+function GithubUser({id,username}) { 
+    return(
+      <div>
+        <h1>{username}</h1>
+        <h2>{id}</h2>
+      </div>
+    )
+}
 function App() {
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -8,15 +18,18 @@ function App() {
       .then((res) => res.json())
       // setData is a function that allows you to change the value of the data state
       .then(data => setData(data));
-      // data is the value of the data state
     },[]);
-    if(!data) {
-      return <div>Loading...</div>
+    if(data) {
+      return <GithubUser 
+      username={data.name}
+      id = {data.id}
+      />
+      
     // the second argument of useEffect is an array of dependencies
-    }else{
-      return <pre>{JSON.stringify(data)}</pre>
     }
-  return <h1> DATA</h1>;
-};
+    return <div>Loading...</div>;
+    
+    }
+  
 
 export default App;
