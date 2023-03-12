@@ -13,22 +13,27 @@ function GithubUser({ name, location, avatar }) {
 
 function App() {
   const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading]   = useState(false);
   useEffect(() => {
+    // fetch("https://api.github.com/users/mosh")
+    // setIsLoading(true)is a function that allows you to change the value of the data state
+    setIsLoading(true);
     fetch(
       `https://api.github.com/users/moonhighway`
     )
       .then((response) => response.json())
-      .then(setData);
+      .then(setData)
+      .then(() => setIsLoading(false))
+      .catch(setError);
   }, []);
-  if (data)
-    return (
-      <GithubUser
-        name={data.name}
-        location={data.location}
-        avatar={data.avatar_url}
-      />
-    );
-  return <h1>Data</h1>;
+  if (isLoading) return <h1>Loading...</h1>;
+  if (error) return <pre>{JSON.stringify(error)}</pre>;
+  if(!data) return null;
+  return (<GithubUser 
+  name={data.name}
+  location={data.location}
+  avatar={data.avatar_url}
+  />);
 }
-
 export default App;
