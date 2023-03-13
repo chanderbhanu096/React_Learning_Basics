@@ -1,8 +1,13 @@
 import "./App.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div>
+      <nav>
+        <Link to="/about">About</Link>
+        <Link to="/contact">About</Link>
+      </nav>
       <h1>My Website</h1>
     </div>
   );
@@ -25,5 +30,14 @@ export function Contact() {
 }
 
 export function App() {
-  return <Home />;
+  return (
+    <div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">About</Link>
+      </nav>
+      <h1>about us</h1>
+    </div>
+  );
 }
