@@ -25,6 +25,16 @@ export function About() {
     </div>
   );
 }
+export function History(){
+  return(
+    <div>
+      <h1>
+        Oue History
+      </h1>
+    </div>
+  )
+
+}
 
 export function Contact() {
   return (
