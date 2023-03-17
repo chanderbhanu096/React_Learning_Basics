@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function App() {
+  const result = useState();
+  console.log(result);
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>  <h2>Start editing to see some magic happen!</h2>
+      <h1>The Package id: </h1>  
+      <h2>Start editing to see some magic happen!</h2>
     </div>
   );
 }

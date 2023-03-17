@@ -1,8 +1,10 @@
 import './App.css';
 
-function App() {
+function App(props) {
   return (
-    <div>hello</div>
+    <div className ="App">
+      <h1>My First {props.name}</h1>
+    </div>
   );
 }
 
